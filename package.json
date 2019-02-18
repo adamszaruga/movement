@@ -1,0 +1,61 @@
+{
+  "name": "Movement",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "./main.js",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "build": {
+    "appId": "movementconsulting",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^4.0.2",
+    "electron-builder": "^20.38.5",
+    "electron-rebuild": "^1.8.4"
+  },
+  "dependencies": {
+    "johnny-five": "^1.0.0",
+    "node-pixel": "^0.10.1",
+    "opn": "^5.4.0",
+    "redux": "^4.0.1",
+    "twilio": "^3.28.0"
+  }
+}
